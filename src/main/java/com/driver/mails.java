@@ -4,12 +4,15 @@ import java.util.Date;
 
 public class mails {
     public Date date;
-    public String sender;
-    public String message;
+    private String senderId;
+    private String message;
 
-    public mails(Date date, String sender, String message) {
+    public mails() {
+    }
+
+    public mails(Date date, String senderId, String message) {
         this.date = date;
-        this.sender = sender;
+        this.senderId = senderId;
         this.message = message;
     }
 
@@ -17,11 +20,23 @@ public class mails {
         return date;
     }
 
-    public String getSender() {
-        return sender;
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getSenderId() {
+        return senderId;
+    }
+
+    public void setSenderId(String senderId) {
+        this.senderId = senderId;
     }
 
     public String getMessage() {
         return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }
